@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- Formulario oculto para que Netlify detecte el form "contacto" durante el deploy.
+     Tiene que tener los mismos campos que el formulario de components/sections/Contacto.tsx. -->
+<html lang="es">
+  <body>
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contacto" />
+      <input name="bot-field" />
+      <input type="text" name="nombre" />
+      <input type="email" name="email" />
+      <input type="tel" name="telefono" />
+      <textarea name="mensaje"></textarea>
+    </form>
+  </body>
+</html>
