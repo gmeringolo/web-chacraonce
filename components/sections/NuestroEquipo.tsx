@@ -18,8 +18,12 @@ export function NuestroEquipo() {
         <ul className="mt-[86px] grid grid-cols-1 gap-x-6 gap-y-[71px] md:grid-cols-2 xl:mt-[81px] xl:grid-cols-3">
           {equipo.personas.map((p) => (
             <li key={p.nombre} className="relative bg-gris-card px-[30px] pb-8 pt-[73px] xl:min-h-[292px]">
-              <span className="absolute left-1/2 top-0 flex size-[94px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-blanco text-negro">
-                <IconoPersona className="size-[66px]" />
+              <span className="absolute left-1/2 top-0 flex size-[94px] -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full bg-blanco text-negro">
+                {p.foto ? (
+                  <Image src={p.foto.src} alt={p.foto.alt} fill sizes="94px" className="object-cover" />
+                ) : (
+                  <IconoPersona className="size-[66px]" />
+                )}
               </span>
               <h3 className="text-titulo-card text-blanco">{p.nombre}</h3>
               <p className="mt-1 text-[12px] leading-[18px] text-rol xl:min-h-[36px]">{p.rol}</p>

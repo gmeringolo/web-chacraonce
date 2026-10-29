@@ -7,8 +7,8 @@ export function Footer() {
   const datos: { icono: ReactNode; texto: string; href?: string; externo?: boolean }[] = [
     { icono: <IconoWhatsapp className="size-7" />, texto: contacto.telefono, href: contacto.whatsapp, externo: true },
     { icono: <IconoEmail className="size-7" />, texto: contacto.email, href: `mailto:${contacto.email}` },
-    { icono: <IconoUbicacion className="size-7" />, texto: contacto.ubicacion },
-    { icono: <IconoInstagram className="size-7" />, texto: contacto.instagram, href: contacto.instagramUrl, externo: true },
+    { icono: <IconoUbicacion className="h-[27px] w-[28px]" />, texto: contacto.ubicacion },
+    { icono: <IconoInstagram className="size-6 mx-0.5" />, texto: contacto.instagram, href: contacto.instagramUrl, externo: true },
   ];
 
   return (

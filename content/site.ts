@@ -46,7 +46,23 @@ export const proposito = {
   },
 };
 
-export const equipo = {
+export type Persona = {
+  nombre: string;
+  rol: string;
+  descripcion: string;
+  // Foto del círculo de la card. Cuando esté, poné por ejemplo:
+  // foto: { src: "/img/equipo/rodolfo.jpg", alt: "Rodolfo Couñago" }
+  // Mientras sea null se muestra el ícono de persona.
+  foto: { src: string; alt: string } | null;
+};
+
+export const equipo: {
+  chip: string;
+  titulo: string;
+  bajada: string[];
+  personas: Persona[];
+  banda: { src: string; alt: string };
+} = {
   chip: "Nuestro equipo",
   titulo: "Tres personas, un mismo compromiso",
   bajada: [
@@ -56,18 +72,21 @@ export const equipo = {
   personas: [
     {
       nombre: "Rodolfo Couñago",
+      foto: null,
       rol: "Ing. Civil — Obras y proyectos civiles",
       descripcion:
         "Más de 15 años dirigiendo obras civiles y montajes industriales. Convierte tu idea en una obra que se sostiene en el tiempo.",
     },
     {
       nombre: "Laura Couñago",
+      foto: null,
       rol: "MBA / Ing. Civil — Control de calidad",
       descripcion:
         "Presupuesta, compra y cuida de que cada peso invertido rinda al máximo, sin desviarse del presupuesto firmado.",
     },
     {
       nombre: "Norbert Both",
+      foto: null,
       rol: "Escribano / Abogado — Estructuras financieras",
       descripcion:
         "Blinda legalmente cada proyecto con estructuras financieras sólidas, para que tu inversión esté protegida en todo momento.",

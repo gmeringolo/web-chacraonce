@@ -54,6 +54,13 @@ Todo el texto, los links (WhatsApp, email, Instagram) y las rutas de imágenes e
 
 Reemplazá `public/ACCA-PLP-ATP-2UN-R06-260925.pdf`. Si el archivo nuevo tiene otro nombre, actualizá `pdf` en `content/site.ts`.
 
+### Fotos del equipo
+
+Los círculos de las cards del equipo muestran un ícono de persona mientras no haya foto.
+1. Copiá las fotos en `public/img/equipo/` (cuadradas, mínimo 200×200 px).
+2. En `content/site.ts`, en cada persona de `equipo.personas`, cambiá `foto: null` por
+   `foto: { src: "/img/equipo/rodolfo.jpg", alt: "Rodolfo Couñago" }`.
+
 ### Carrusel de proyectos
 
 La card de Lapuente está duplicada para probar el carrusel (`proyectos.lista` en `content/site.ts`). Para agregar un proyecto real, creá otro objeto como `lapuente` y sumalo a la lista; para dejar uno solo, borrá el duplicado (las flechas y los indicadores se ocultan solos).
