@@ -15,9 +15,13 @@ export function NuestroEquipo() {
           className="max-w-[896px]"
         />
 
-        <ul className="mt-[86px] grid grid-cols-1 gap-x-6 gap-y-[71px] md:grid-cols-2 xl:mt-[81px] xl:grid-cols-3">
+        {/* 1 por fila hasta 639, 2 de 640 a 767 (la tercera centrada) y 3 por fila desde 768 */}
+        <ul className="mt-[86px] grid grid-cols-1 gap-x-6 gap-y-[71px] sm:grid-cols-2 md:grid-cols-3 md:gap-x-4 lg:gap-x-6 xl:mt-[81px]">
           {equipo.personas.map((p) => (
-            <li key={p.nombre} className="relative bg-gris-card px-[30px] pb-8 pt-[73px] xl:min-h-[292px]">
+            <li
+              key={p.nombre}
+              className="relative bg-gris-card px-[30px] pb-8 pt-[73px] sm:max-md:odd:last:col-span-2 sm:max-md:odd:last:w-[calc(50%-12px)] sm:max-md:odd:last:justify-self-center md:px-5 lg:px-[30px] xl:min-h-[292px]"
+            >
               <span className="absolute left-1/2 top-0 flex size-[94px] -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full bg-blanco text-negro">
                 {p.foto ? (
                   <Image src={p.foto.src} alt={p.foto.alt} fill sizes="94px" className="object-cover" />
@@ -26,7 +30,7 @@ export function NuestroEquipo() {
                 )}
               </span>
               <h3 className="text-titulo-card text-blanco">{p.nombre}</h3>
-              <p className="mt-1 text-[10px] leading-[18px] text-rol xl:min-h-[36px]">{p.rol}</p>
+              <p className="mt-1 text-[10px] leading-[18px] text-rol sm:min-h-[36px]">{p.rol}</p>
               <p className="mt-6 text-p-card text-beige xl:mt-[26px]">{p.descripcion}</p>
             </li>
           ))}

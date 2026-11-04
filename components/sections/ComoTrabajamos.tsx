@@ -12,9 +12,10 @@ export function ComoTrabajamos() {
           bajada={comoTrabajamos.bajada}
           className="max-w-[564px]"
         />
-        <ol className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:mt-16 xl:grid-cols-3">
+        {/* 1 por fila hasta 640, 2 por fila de 641 a 768 y 3 por fila desde 769 */}
+        <ol className="mt-10 grid grid-cols-1 gap-6 min-[641px]:grid-cols-2 min-[769px]:grid-cols-3 min-[769px]:gap-4 lg:gap-6 xl:mt-16">
           {comoTrabajamos.fases.map((f) => (
-            <li key={f.numero} className="flex flex-col gap-4 bg-gris-card p-8 xl:min-h-[254px] xl:p-10">
+            <li key={f.numero} className="flex flex-col gap-4 bg-gris-card p-8 min-[769px]:p-6 lg:p-8 xl:min-h-[254px] xl:p-10">
               <div className="flex flex-col gap-1">
                 <span className="text-num-card text-chip" aria-hidden="true">
                   {f.numero}
