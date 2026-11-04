@@ -81,12 +81,12 @@ export function FormularioContacto() {
       <button
         type="submit"
         disabled={estado === "enviando"}
-        className="mt-[26px] h-[43px] w-full bg-ocre text-[14px] font-bold leading-[23px] text-texto-boton transition-colors hover:bg-[#cdb596] disabled:cursor-wait disabled:opacity-70"
+        className="mt-[26px] h-[43px] w-full bg-ocre text-[12px] font-bold leading-[23px] text-texto-boton transition-colors hover:bg-[#cdb596] disabled:cursor-wait disabled:opacity-70"
       >
         {estado === "enviando" ? "Enviando…" : textos.boton}
       </button>
 
-      <p role="alert" className="text-[13px] text-[#f0a58f] [&:not(:empty)]:mt-3">
+      <p role="alert" className="text-[11px] text-[#f0a58f] [&:not(:empty)]:mt-3">
         {estado === "error" ? textos.error : ""}
       </p>
     </form>
@@ -113,17 +113,17 @@ function Campo({ nombre, label, tipo = "text", autoComplete, multilinea, requeri
     required: requerido,
     "aria-invalid": error ? true : undefined,
     "aria-describedby": error ? idError : undefined,
-    className: `peer block w-full resize-none border-0 border-b bg-transparent pb-2 pt-1 text-[15px] leading-[24px] text-blanco outline-none transition-colors placeholder:text-transparent focus:border-ocre focus-visible:outline-none ${error ? "border-[#f0a58f]" : "border-label"}`,
+    className: `peer block w-full resize-none border-0 border-b bg-transparent pb-2 pt-1 text-[13px] leading-[24px] text-blanco outline-none transition-colors placeholder:text-transparent focus:border-ocre focus-visible:outline-none ${error ? "border-[#f0a58f]" : "border-label"}`,
   };
   return (
     <div className="flex flex-col">
-      <label htmlFor={id} className="text-[14px] leading-[24px] text-label">
+      <label htmlFor={id} className="text-[12px] leading-[24px] text-label">
         {label}
         {requerido ? <span aria-hidden="true"> *</span> : null}
       </label>
       {multilinea ? <textarea rows={3} {...comunes} /> : <input type={tipo} {...comunes} />}
       {error ? (
-        <span id={idError} className="mt-1 text-[12px] text-[#f0a58f]">
+        <span id={idError} className="mt-1 text-[10px] text-[#f0a58f]">
           {error}
         </span>
       ) : null}

@@ -15,69 +15,70 @@
   --color-texto-boton: #111111;
 
   --breakpoint-md: 48rem; /* 768 */
+  --breakpoint-lg: 64rem; /* 1024 */
   --breakpoint-xl: 80rem; /* 1280 */
 }
 
 /* ── Estilos de texto ────────────────────────────────────────────────
-   Valores a 1440 según Figma; se achican con clamp() entre 375 y 1440. */
+   Valores a 1440 (2 px menos que el Figma); se achican con clamp() entre 375 y 1440. */
 @utility text-a1 {
-  font-size: clamp(2.125rem, 1.773rem + 1.502vw, 3.125rem); /* 34 → 50 */
+  font-size: clamp(2rem, 1.683rem + 1.352vw, 2.9rem); /* 32 → 46,4 */
   line-height: 1.5;
   font-weight: 800;
 }
 @utility text-a2 {
-  font-size: clamp(1.625rem, 1.493rem + 0.563vw, 2rem); /* 26 → 32 */
+  font-size: clamp(1.5rem, 1.43rem + 0.3vw, 1.7rem); /* 24 → 27,2 */
   line-height: 1.406;
   font-weight: 700;
 }
 @utility text-a3 {
-  font-size: clamp(1.125rem, 1.037rem + 0.376vw, 1.375rem); /* 18 → 22 */
+  font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem); /* 16 → 20 */
   line-height: 1.59;
   font-weight: 400;
 }
 @utility text-parrafo {
-  font-size: clamp(1.0625rem, 0.996rem + 0.282vw, 1.25rem); /* 17 → 20 */
+  font-size: clamp(0.9375rem, 0.871rem + 0.282vw, 1.125rem); /* 15 → 18 */
   line-height: 1.75;
   font-weight: 400;
 }
 @utility text-a4 {
-  font-size: 0.9375rem; /* 15 */
+  font-size: 0.8125rem; /* 13 */
   line-height: normal;
   font-weight: 300;
 }
 @utility text-a5 {
-  font-size: 0.75rem; /* 12 */
+  font-size: 0.625rem; /* 10 */
   line-height: normal;
   font-weight: 300;
 }
 @utility text-navbar {
-  font-size: 1.125rem; /* 18 */
+  font-size: 0.95rem; 
   line-height: normal;
   font-weight: 400;
 }
 @utility text-boton {
-  font-size: clamp(1rem, 0.956rem + 0.188vw, 1.125rem); /* 16 → 18 */
+  font-size: 0.95rem;
   line-height: 1.75rem;
   font-weight: 300;
 }
 @utility text-titulo-card {
-  font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem); /* 18 → 20 */
+  font-size: clamp(1rem, 0.956rem + 0.188vw, 1.125rem); /* 16 → 18 */
   line-height: 1.3;
   font-weight: 700;
 }
 @utility text-p-card {
-  font-size: 0.9375rem; /* 15 */
+  font-size: 0.8125rem; /* 13 */
   line-height: 1.5625rem; /* 25 */
   font-weight: 400;
 }
 @utility text-num-card {
-  font-size: clamp(2.75rem, 2.486rem + 1.127vw, 3.5rem); /* 44 → 56 */
+  font-size: clamp(2.625rem, 2.361rem + 1.127vw, 3.375rem); /* 42 → 54 */
   line-height: 1;
   font-weight: 300;
   letter-spacing: -0.03em;
 }
 @utility text-fase {
-  font-size: clamp(1.25rem, 1.162rem + 0.376vw, 1.5rem); /* 20 → 24 */
+  font-size: clamp(1.125rem, 1.037rem + 0.376vw, 1.375rem); /* 18 → 22 */
   line-height: 1.333;
   font-weight: 700;
 }
@@ -119,22 +120,14 @@ html {
   color: var(--color-blanco);
   scroll-behavior: smooth;
   scroll-padding-top: var(--navbar-h);
-  scroll-snap-type: y proximity;
-}
-@media (min-width: 80rem) {
-  html {
-    scroll-snap-type: y mandatory;
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-    scroll-snap-type: none;
   }
 }
 
 .seccion {
-  scroll-snap-align: start;
   min-height: var(--seccion-h);
 }
 

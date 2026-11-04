@@ -13,8 +13,8 @@ export const contacto = {
 };
 
 export const navLinks = [
-  { label: "Equipo", href: "#equipo" },
   { label: "Cómo trabajamos", href: "#como-trabajamos" },
+  { label: "Equipo", href: "#equipo" },
   { label: "Servicios", href: "#servicios" },
   { label: "Proyectos", href: "#proyectos" },
 ];
@@ -246,9 +246,9 @@ export const footer = {
     "Desarrollamos diseños urbanos innovadores que mejoran la calidad de vida y promueven el crecimiento sostenible.",
   links: [
     { label: "Nosotros", href: "#nosotros" },
+    { label: "Cómo trabajamos", href: "#como-trabajamos" },
     { label: "Equipo", href: "#equipo" },
     { label: "Diferencial", href: "#diferencial" },
-    { label: "Cómo trabajamos", href: "#como-trabajamos" },
     { label: "Servicios", href: "#servicios" },
     { label: "Proyectos", href: "#proyectos" },
   ],

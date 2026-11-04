@@ -3,28 +3,18 @@ type Props = {
   chip: string;
   titulo: string | string[];
   bajada?: string | string[];
-  /** Colores según Figma: algunas secciones usan el beige en chip y título. */
-  colorChip?: string;
-  colorTitulo?: string;
   className?: string;
 };
 
-/** Chip + título (h2) + bajada opcional. El id se usa en aria-labelledby de la sección. */
-export function IntroSeccion({
-  id,
-  chip,
-  titulo,
-  bajada,
-  colorChip = "text-chip",
-  colorTitulo = "text-blanco",
-  className = "",
-}: Props) {
+/** Chip + título (h2) + bajada opcional. Solo el chip lleva color; el resto va en blanco.
+ *  El id se usa en aria-labelledby de la sección. */
+export function IntroSeccion({ id, chip, titulo, bajada, className = "" }: Props) {
   const lineas = Array.isArray(titulo) ? titulo : [titulo];
   const bajadas = bajada ? (Array.isArray(bajada) ? bajada : [bajada]) : [];
   return (
     <div className={`flex flex-col gap-2.5 ${className}`}>
-      <p className={`text-a4 uppercase ${colorChip}`}>{chip}</p>
-      <h2 id={id} className={`text-a2 ${colorTitulo}`}>
+      <p className="text-a4 uppercase text-chip">{chip}</p>
+      <h2 id={id} className="text-a2 text-blanco">
         {lineas.map((l, i) => (
           <span key={i} className="xl:block">
             {l}
@@ -33,7 +23,7 @@ export function IntroSeccion({
         ))}
       </h2>
       {bajadas.length > 0 && (
-        <p className="text-parrafo text-beige">
+        <p className="text-parrafo text-blanco">
           {bajadas.map((l, i) => (
             <span key={i} className="md:block">
               {l}

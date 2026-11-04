@@ -11,8 +11,9 @@ export function CardProyecto({ proyecto, boton, prioridad = false }: Props) {
   const principal = proyecto.imagenes[activa];
   const miniaturas = proyecto.imagenes.slice(0, 5).filter((_, i) => i !== activa).slice(0, 4);
 
+  // Desde 1024 usa el formato de escritorio; entre 1024 y 1280 las columnas se reparten en proporción.
   return (
-    <article className="grid h-full grid-cols-1 gap-8 bg-gris-card p-5 md:p-8 xl:grid-cols-[545px_1fr] xl:gap-[57px] xl:px-[55px] xl:py-[47px]">
+    <article className="grid h-full grid-cols-1 gap-8 bg-gris-card p-5 md:p-8 lg:grid-cols-[minmax(0,545fr)_minmax(0,416fr)] lg:gap-10 lg:px-10 lg:py-10 xl:grid-cols-[545px_1fr] xl:gap-[57px] xl:px-[55px] xl:py-[47px]">
       {/* Galería */}
       <div className="flex flex-col gap-[11px]">
         <div className="relative aspect-[545/374] w-full overflow-hidden">
@@ -22,7 +23,7 @@ export function CardProyecto({ proyecto, boton, prioridad = false }: Props) {
             alt={principal.alt}
             fill
             priority={prioridad}
-            sizes="(min-width: 1280px) 545px, 100vw"
+            sizes="(min-width: 1280px) 545px, (min-width: 1024px) 480px, 100vw"
             className="animate-[aparecer_.35s_ease] object-cover"
           />
         </div>
@@ -41,7 +42,7 @@ export function CardProyecto({ proyecto, boton, prioridad = false }: Props) {
                     src={img.src}
                     alt=""
                     fill
-                    sizes="(min-width: 1280px) 128px, 25vw"
+                    sizes="(min-width: 1280px) 128px, (min-width: 1024px) 112px, 25vw"
                     className="object-cover opacity-80 transition duration-300 group-hover:scale-105 group-hover:opacity-100"
                   />
                 </button>
@@ -57,7 +58,7 @@ export function CardProyecto({ proyecto, boton, prioridad = false }: Props) {
         <h3 className="mt-2.5 text-a2 text-blanco">{proyecto.nombre}</h3>
         <p className="mt-0 max-w-[439px] text-p-card text-blanco">{proyecto.descripcion}</p>
 
-        <dl className="mt-8 grid max-w-[398px] grid-cols-2 xl:mt-[33px]">
+        <dl className="mt-8 grid max-w-[398px] grid-cols-2 lg:mt-[33px]">
           {proyecto.ficha.map((f, i) => (
             <div
               key={f.label}
@@ -73,7 +74,7 @@ export function CardProyecto({ proyecto, boton, prioridad = false }: Props) {
           href={proyecto.pdf}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex h-[50px] w-full items-center justify-center bg-ocre text-boton text-negro transition-colors hover:bg-[#cdb596] sm:w-[255px] xl:mt-6"
+          className="mt-8 inline-flex h-[50px] w-full items-center justify-center bg-ocre text-boton text-negro transition-colors hover:bg-[#cdb596] sm:w-[255px] lg:mt-6"
         >
           {boton}
           <span className="sr-only"> {proyecto.nombre} (PDF, se abre en una pestaña nueva)</span>

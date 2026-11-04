@@ -17,9 +17,9 @@ export default function Home() {
       <main className="pt-[var(--navbar-h)]">
         <Inicio />
         <NuestroProposito />
+        <ComoTrabajamos />
         <NuestroEquipo />
         <PorQueElegirnos />
-        <ComoTrabajamos />
         <QueHacemos />
         <NuestrosProyectos />
         <Contacto />

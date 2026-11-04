@@ -20,7 +20,7 @@ export function Contacto() {
           <h2 id="contacto-titulo" className="text-a1 text-blanco [text-wrap:balance]">
             {contactoSeccion.titulo}
           </h2>
-          <p className="max-w-[469px] text-a3 text-beige">{contactoSeccion.subtitulo}</p>
+          <p className="max-w-[469px] text-a3 text-blanco">{contactoSeccion.subtitulo}</p>
         </div>
         <div className="bg-negro/90 p-6 md:p-[39px]">
           <FormularioContacto />

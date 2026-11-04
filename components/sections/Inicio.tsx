@@ -28,13 +28,14 @@ export function Inicio() {
       />
 
       <div className="contenedor relative flex flex-1 flex-col justify-center py-12 md:flex-none md:py-20">
-        <div className="max-w-[502px] md:max-w-[58%] xl:max-w-[502px]">
+        {/* Entre 1280 y 1400 el bloque sube un poco */}
+        <div className="max-w-[502px] md:max-w-[58%] xl:max-w-[502px] xl:max-[1400px]:-translate-y-10">
           <h1 id="inicio-titulo" className="text-a1 text-blanco">
             {inicio.titulo}
           </h1>
           <div className="mt-4 flex flex-col gap-5 xl:mt-6">
             {inicio.subtitulos.map((t) => (
-              <p key={t} className="max-w-[469px] text-a3 text-beige">
+              <p key={t} className="max-w-[469px] text-a3 text-blanco">
                 {t}
               </p>
             ))}

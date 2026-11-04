@@ -85,6 +85,7 @@ La card de Lapuente está duplicada para probar el carrusel (`proyectos.lista` e
 ## Comportamiento responsive
 
 - Diseño base: 1440 px. Breakpoints: mobile < 768, tablet 768–1279, desktop ≥ 1280.
+- Desde 1024 px: navbar completo (hamburguesa solo por debajo), card de proyecto con el formato de escritorio y flechas del carrusel a los lados de la card.
 - El contenido vive en un contenedor de 1128 px; a más de 1440 px solo crecen los márgenes y las imágenes a sangre (hero y contacto) se estiran.
-- Desktop: cada sección ocupa la pantalla y el scroll encaja al inicio de la siguiente (`scroll-snap`). En tablet y mobile las secciones crecen lo necesario y el encaje es suave.
+- Desktop: cada sección ocupa la pantalla. En tablet y mobile las secciones crecen lo necesario. El scroll es libre (sin encaje entre secciones).
 - Los textos se achican con `clamp()` entre 375 y 1440 px (tokens en `app/globals.css`).

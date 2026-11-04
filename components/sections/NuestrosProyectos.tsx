@@ -45,37 +45,55 @@ export function NuestrosProyectos() {
     <section id="proyectos" aria-labelledby="proyectos-titulo" className="seccion flex">
       <div className="contenedor flex flex-col justify-center py-12 md:py-16 xl:py-4">
         <div className="flex items-end justify-between gap-6">
-          <IntroSeccion id="proyectos-titulo" chip={proyectos.chip} titulo={proyectos.titulo} colorChip="text-blanco" />
+          <IntroSeccion id="proyectos-titulo" chip={proyectos.chip} titulo={proyectos.titulo} />
           {hayVarios && (
-            <div className="hidden shrink-0 gap-3 md:flex">
+            <div className="hidden shrink-0 gap-3 md:flex lg:hidden">
               <BotonFlecha direccion="izquierda" onClick={anterior} />
               <BotonFlecha direccion="derecha" onClick={siguiente} />
             </div>
           )}
         </div>
 
-        <div
-          role="region"
-          aria-roledescription="carrusel"
-          aria-label="Proyectos"
-          tabIndex={0}
-          onKeyDown={onKeyDown}
-          className="mt-8 overflow-hidden xl:mt-[43px]"
-          ref={emblaRef}
-        >
-          <div className="flex touch-pan-y">
-            {proyectos.lista.map((p, i) => (
-              <div
-                key={i}
-                role="group"
-                aria-roledescription="diapositiva"
-                aria-label={`${i + 1} de ${proyectos.lista.length}`}
-                className="min-w-0 flex-[0_0_100%] pr-0"
-              >
-                <CardProyecto proyecto={p} boton={proyectos.boton} />
-              </div>
-            ))}
+        <div className="relative mt-8 xl:mt-[43px]">
+          <div
+            role="region"
+            aria-roledescription="carrusel"
+            aria-label="Proyectos"
+            tabIndex={0}
+            onKeyDown={onKeyDown}
+            className="overflow-hidden"
+            ref={emblaRef}
+          >
+            <div className="flex touch-pan-y">
+              {proyectos.lista.map((p, i) => (
+                <div
+                  key={i}
+                  role="group"
+                  aria-roledescription="diapositiva"
+                  aria-label={`${i + 1} de ${proyectos.lista.length}`}
+                  className="min-w-0 flex-[0_0_100%] pr-0"
+                >
+                  <CardProyecto proyecto={p} boton={proyectos.boton} />
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Desde 1024: flechas a los lados de la card (montadas sobre el borde hasta 1280, afuera desde ahí) */}
+          {hayVarios && (
+            <>
+              <BotonFlecha
+                direccion="izquierda"
+                onClick={anterior}
+                className="absolute top-1/2 -translate-y-1/2 bg-negro max-lg:hidden lg:-left-[22px] xl:-left-[60px]"
+              />
+              <BotonFlecha
+                direccion="derecha"
+                onClick={siguiente}
+                className="absolute top-1/2 -translate-y-1/2 bg-negro max-lg:hidden lg:-right-[22px] xl:-right-[60px]"
+              />
+            </>
+          )}
         </div>
 
         {hayVarios && (

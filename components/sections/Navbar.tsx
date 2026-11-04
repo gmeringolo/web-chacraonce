@@ -39,7 +39,7 @@ export function Navbar() {
     };
     window.addEventListener("keydown", onKey);
 
-    const mq = window.matchMedia("(min-width: 80rem)");
+    const mq = window.matchMedia("(min-width: 64rem)");
     const onResize = () => mq.matches && setAbierto(false);
     mq.addEventListener("change", onResize);
 
@@ -66,7 +66,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-[34px] xl:flex">
+        <div className="hidden items-center gap-[34px] lg:flex">
           <ul className="flex items-center gap-[25px]">
             {navLinks.map((l) => (
               <li key={l.href}>
@@ -84,11 +84,11 @@ export function Navbar() {
           </a>
         </div>
 
-        {/* Hamburguesa (mobile y tablet) */}
+        {/* Hamburguesa (mobile y tablet, menos de 1024) */}
         <button
           ref={botonRef}
           type="button"
-          className="relative z-10 -mr-2 flex size-11 items-center justify-center xl:hidden"
+          className="relative z-10 -mr-2 flex size-11 items-center justify-center lg:hidden"
           aria-expanded={abierto}
           aria-controls="menu-mobile"
           aria-label={abierto ? "Cerrar menú" : "Abrir menú"}
@@ -112,7 +112,7 @@ export function Navbar() {
         id="menu-mobile"
         ref={menuRef}
         hidden={!abierto}
-        className="fixed inset-0 bg-negro pt-[var(--navbar-h)] xl:hidden"
+        className="fixed inset-0 bg-negro pt-[var(--navbar-h)] lg:hidden"
       >
         <ul className="contenedor flex flex-col gap-2 pt-10">
           {navLinks.map((l) => (

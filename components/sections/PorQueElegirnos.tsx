@@ -12,7 +12,6 @@ export function PorQueElegirnos() {
             id="diferencial-titulo"
             chip={porQueElegirnos.chip}
             titulo={porQueElegirnos.titulo}
-            colorChip="text-blanco"
           />
           <ul className="flex flex-col gap-[29px] xl:max-w-[478px]">
             {porQueElegirnos.items.map((it) => (

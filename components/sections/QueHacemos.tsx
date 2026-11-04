@@ -21,7 +21,6 @@ export function QueHacemos() {
             id="servicios-titulo"
             chip={queHacemos.chip}
             titulo={queHacemos.titulo}
-            colorChip="text-blanco"
           />
           <ul className="flex flex-col gap-[29px]">
             {queHacemos.items.map((it) => (

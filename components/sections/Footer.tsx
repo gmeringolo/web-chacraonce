@@ -12,18 +12,18 @@ export function Footer() {
   ];
 
   return (
-    <footer className="snap-end bg-negro">
-      <div className="contenedor grid grid-cols-1 gap-10 pb-12 pt-14 md:grid-cols-2 xl:grid-cols-[440px_330px_1fr] xl:gap-0 xl:pb-[57px] xl:pt-[53px]">
+    <footer className="bg-negro">
+      <div className="contenedor grid grid-cols-1 gap-10 pb-8 pt-10 md:grid-cols-2 xl:grid-cols-[440px_330px_1fr] xl:gap-0 xl:pb-[41px] xl:pt-[37px]">
         <div className="flex flex-col gap-6 xl:pt-1.5">
           <Image src="/logo-chacra-once.svg" alt="Chacra Once" width={179} height={81} unoptimized className="h-[81px] w-[179px] self-start" />
-          <p className="max-w-[290px] text-[18px] font-light leading-7 text-blanco">{footer.texto}</p>
+          <p className="max-w-[290px] text-[16px] font-light leading-7 text-blanco">{footer.texto}</p>
         </div>
 
         <nav aria-label="Secciones">
           <ul className="flex flex-col gap-[15px]">
             {footer.links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="text-[18px] font-light leading-7 text-blanco transition-colors hover:text-ocre">
+                <a href={l.href} className="text-[16px] font-light leading-7 text-blanco transition-colors hover:text-ocre">
                   {l.label}
                 </a>
               </li>
@@ -36,7 +36,7 @@ export function Footer() {
             const contenido = (
               <>
                 <span className="shrink-0 text-ocre">{d.icono}</span>
-                <span className="text-[18px] font-light leading-7">{d.texto}</span>
+                <span className="text-[16px] font-light leading-7">{d.texto}</span>
               </>
             );
             return (
@@ -59,7 +59,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-blanco/80">
-        <div className="contenedor flex flex-col gap-2 py-4 text-[15px] font-light text-blanco md:flex-row md:items-center md:justify-between">
+        <div className="contenedor flex flex-col gap-2 py-4 text-[13px] font-light text-blanco md:flex-row md:items-center md:justify-between">
           <p>{footer.derechos}</p>
           <p>
             Desarrollado por{" "}

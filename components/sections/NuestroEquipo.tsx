@@ -26,7 +26,7 @@ export function NuestroEquipo() {
                 )}
               </span>
               <h3 className="text-titulo-card text-blanco">{p.nombre}</h3>
-              <p className="mt-1 text-[12px] leading-[18px] text-rol xl:min-h-[36px]">{p.rol}</p>
+              <p className="mt-1 text-[10px] leading-[18px] text-rol xl:min-h-[36px]">{p.rol}</p>
               <p className="mt-6 text-p-card text-beige xl:mt-[26px]">{p.descripcion}</p>
             </li>
           ))}

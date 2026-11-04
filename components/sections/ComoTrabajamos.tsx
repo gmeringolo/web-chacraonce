@@ -24,7 +24,7 @@ export function ComoTrabajamos() {
                   {f.titulo}
                 </h3>
               </div>
-              <p className="text-[14px] leading-[22px] text-beige">{f.texto}</p>
+              <p className="text-[12px] leading-[22px] text-beige">{f.texto}</p>
             </li>
           ))}
         </ol>

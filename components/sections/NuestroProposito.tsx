@@ -20,12 +20,10 @@ export function NuestroProposito() {
             id="nosotros-titulo"
             chip={proposito.chip}
             titulo={proposito.titulo}
-            colorChip="text-beige"
-            colorTitulo="text-beige"
           />
           <div className="flex flex-col gap-6 xl:mt-1.5">
             {proposito.parrafos.map((p) => (
-              <p key={p} className="text-parrafo text-beige">
+              <p key={p} className="text-parrafo text-blanco">
                 {p}
               </p>
             ))}
