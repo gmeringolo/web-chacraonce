@@ -7,7 +7,7 @@ export function PorQueElegirnos() {
   return (
     <section id="diferencial" aria-labelledby="diferencial-titulo" className="seccion flex">
       {/* Hasta 768: una columna (texto arriba, imagen abajo). Desde 769: texto y cards a la izquierda, imagen a la derecha */}
-      <div className="contenedor grid grid-cols-1 content-center gap-10 py-12 md:py-16 min-[769px]:grid-cols-[minmax(0,552fr)_minmax(0,576fr)] min-[769px]:gap-8 lg:gap-10 lg:py-10 xl:grid-cols-[552px_576px] xl:gap-0">
+      <div className="contenedor grid grid-cols-1 content-center gap-10 py-12 md:py-16 min-[48.0625rem]:grid-cols-[minmax(0,552fr)_minmax(0,576fr)] min-[48.0625rem]:gap-8 lg:gap-10 lg:py-10 xl:grid-cols-[552px_576px] xl:gap-0">
         <div className="flex flex-col gap-10">
           <IntroSeccion
             id="diferencial-titulo"
@@ -20,7 +20,9 @@ export function PorQueElegirnos() {
             ))}
           </ul>
         </div>
-        <div className="relative h-[60svh] min-h-[320px] md:h-[440px] min-[769px]:h-auto min-[769px]:min-h-[520px] lg:-mt-[9px] lg:h-[600px] xl:h-[658px]">
+        {/* Desde 769 no tiene alto fijo: se estira al alto de la columna de texto
+            y con los márgenes negativos sobresale 9px arriba y 12px abajo de la última card */}
+        <div className="relative h-[60svh] min-h-[320px] md:h-[440px] min-[48.0625rem]:-mb-[12px] min-[48.0625rem]:-mt-[9px] min-[48.0625rem]:h-auto min-[48.0625rem]:min-h-0">
           <Image
             src={porQueElegirnos.imagen.src}
             alt={porQueElegirnos.imagen.alt}
