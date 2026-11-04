@@ -15,7 +15,7 @@ export function Contacto() {
       />
       <div aria-hidden="true" className="absolute inset-0 bg-negro/[.63]" />
 
-      <div className="contenedor relative grid grid-cols-1 content-center items-center gap-10 py-14 md:py-20 xl:grid-cols-[1fr_551px] xl:gap-12">
+      <div className="contenedor relative grid grid-cols-1 content-center items-center gap-10 py-14 md:py-20 lg:grid-cols-[1fr_480px] lg:gap-12 xl:grid-cols-[1fr_551px]">
         <div className="flex max-w-[525px] flex-col gap-6">
           <h2 id="contacto-titulo" className="text-a1 text-blanco [text-wrap:balance]">
             {contactoSeccion.titulo}

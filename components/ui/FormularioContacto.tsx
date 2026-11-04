@@ -121,7 +121,7 @@ function Campo({ nombre, label, tipo = "text", autoComplete, multilinea, requeri
         {label}
         {requerido ? <span aria-hidden="true"> *</span> : null}
       </label>
-      {multilinea ? <textarea rows={3} {...comunes} /> : <input type={tipo} {...comunes} />}
+      {multilinea ? <textarea rows={2} {...comunes} /> : <input type={tipo} {...comunes} />}
       {error ? (
         <span id={idError} className="mt-1 text-[10px] text-[#f0a58f]">
           {error}

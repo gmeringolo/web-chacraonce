@@ -24,7 +24,7 @@ export function QueHacemos() {
           />
           <ul className="flex flex-col gap-[29px]">
             {queHacemos.items.map((it) => (
-              <CardCompromiso key={it.titulo} {...it} colorTexto="text-blanco" />
+              <CardCompromiso key={it.titulo} {...it} />
             ))}
           </ul>
         </div>

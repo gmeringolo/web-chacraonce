@@ -72,7 +72,7 @@ export const equipo: {
   personas: [
     {
       nombre: "Rodolfo Couñago",
-      foto: null,
+      foto: { src: "/img/equipo/Rodolfo.jpeg", alt: "Rodolfo Couñago" },
       rol: "Ing. Civil — Obras y proyectos civiles",
       descripcion:
         "Más de 15 años dirigiendo obras civiles y montajes industriales. Convierte tu idea en una obra que se sostiene en el tiempo.",
