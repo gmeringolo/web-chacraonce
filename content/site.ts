@@ -4,7 +4,7 @@
 export const SITE_URL = "https://chacraonce.com.uy";
 
 export const contacto = {
-  telefono: "+598 95 142956",
+  telefono: "+598 095 142956",
   whatsapp: "https://wa.me/59895142956",
   email: "contacto@chacraonce.com.uy",
   ubicacion: "Montevideo, Uruguay",

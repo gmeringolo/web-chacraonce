@@ -34,7 +34,8 @@ export const metadata: Metadata = {
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-light.png", sizes: "32x32", type: "image/png", media: "(prefers-color-scheme: light)" },
       { url: "/favicon-dark.png", sizes: "32x32", type: "image/png", media: "(prefers-color-scheme: dark)" },
-      { url: "/favicon.ico", sizes: "any" },
+      // Con sizes "any" Chrome elegía el .ico y lo escalaba; así prioriza el SVG
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
